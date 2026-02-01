@@ -9,7 +9,6 @@ import { Feed } from "feed";
 const DOMAIN = "https://clark-cui.top";
 const AUTHOR = {
   name: "Clark Cui",
-  email: "rongchuancui@gmail.com",
   link: DOMAIN,
 };
 const OPTIONS: FeedOptions = {
