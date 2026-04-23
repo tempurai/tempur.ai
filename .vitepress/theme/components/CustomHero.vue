@@ -42,16 +42,15 @@ import { withBase } from 'vitepress'
   transform: translateX(-50%);
   width: 100%;
   max-width: 1440px;
+  overflow: hidden;
   z-index: 0;
   pointer-events: none;
 }
 
 .uk-hero__wave {
   position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 70%;
+  inset: 0;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: right center;
