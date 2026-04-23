@@ -1,17 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <!-- Frame -->
+  <!-- Parchment seal -->
   <circle cx="16" cy="16" r="14.4" fill="#faf6ee" stroke="#1d3350" stroke-width="1"/>
 
-  <!-- Armillary sphere: three intersecting rings (ellipses) -->
-  <g stroke="#1d3350" stroke-width="1.1" fill="none" stroke-linecap="round">
-    <ellipse cx="16" cy="16" rx="8" ry="2.6"/>
-    <ellipse cx="16" cy="16" rx="8" ry="2.6" transform="rotate(60 16 16)"/>
-    <ellipse cx="16" cy="16" rx="8" ry="2.6" transform="rotate(-60 16 16)"/>
+  <!-- Inner containment ring -->
+  <circle cx="16" cy="16" r="10.2" stroke="#1d3350" stroke-width="0.7" fill="none" opacity="0.7"/>
+
+  <!-- Hexagram: two overlapping triangles (六芒阵) -->
+  <g stroke="#1d3350" stroke-width="1.05" fill="none" stroke-linejoin="miter" stroke-linecap="round">
+    <!-- Upright triangle -->
+    <polygon points="16,9.5 21.63,19.25 10.37,19.25"/>
+    <!-- Inverted triangle -->
+    <polygon points="16,22.5 10.37,12.75 21.63,12.75"/>
   </g>
 
-  <!-- Central core — warm vermilion dot -->
-  <circle cx="16" cy="16" r="1.7" fill="#b85a48"/>
+  <!-- Eight cardinal glyph dots on inner ring (八卦位) -->
+  <g fill="#1d3350">
+    <circle cx="16" cy="5.8" r="0.7"/>
+    <circle cx="23.21" cy="8.79" r="0.7"/>
+    <circle cx="26.2" cy="16" r="0.7"/>
+    <circle cx="23.21" cy="23.21" r="0.7"/>
+    <circle cx="16" cy="26.2" r="0.7"/>
+    <circle cx="8.79" cy="23.21" r="0.7"/>
+    <circle cx="5.8" cy="16" r="0.7"/>
+    <circle cx="8.79" cy="8.79" r="0.7"/>
+  </g>
 
-  <!-- Subtle stand base -->
-  <line x1="16" y1="17.7" x2="16" y2="25" stroke="#1d3350" stroke-width="1" stroke-linecap="round" opacity="0.55"/>
+  <!-- Central sigil core -->
+  <circle cx="16" cy="16" r="1.7" fill="#b85a48"/>
 </svg>
