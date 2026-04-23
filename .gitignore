@@ -4,3 +4,8 @@ node_modules
 .vitepress/cache
 .DS_Store
 .vscode
+
+# Debug / intermediate artifacts
+.playwright-mcp/
+/*.png
+/images/

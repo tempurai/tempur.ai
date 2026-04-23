@@ -1,0 +1,133 @@
+/**
+ * Warmcraft Theme for VitePress
+ * Body/UI/Display: LXGW WenKai (霞鹜文楷) — warm, calligraphic; handles CJK + Latin
+ * Mono: JetBrains Mono
+ */
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Regular/result.css');
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Light/result.css');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --wc-dark: #2d2926;
+  --wc-dark-2: #3d3834;
+  --wc-dark-3: #5a544d;
+  --wc-cream: #f5f0eb;
+  --wc-cream-deep: #ede7e0;
+  --wc-parchment: #faf8f5;
+  --wc-terracotta: #c4785a;
+  --wc-terracotta-light: #d4927a;
+  --wc-terracotta-deep: #a8624a;
+  --wc-gold: #b8976a;
+  --wc-sage: #7a9e7e;
+  --wc-clay: #b85a5a;
+  --wc-stone: #8a8378;
+  --wc-stone-light: #b5afa6;
+  --wc-indigo: #2b4a6f;
+  --wc-indigo-deep: #1d3350;
+  --wc-surface-1: #faf8f5;
+  --wc-surface-2: #f5f0eb;
+  --wc-surface-3: #ede7e0;
+  --wc-surface-4: #e5ded6;
+
+  --font-serif-cn: 'LXGW WenKai', 'Noto Serif SC', serif;
+  --font-serif-en: 'LXGW WenKai', 'Noto Serif SC', serif;
+  --font-display: 'LXGW WenKai', 'Noto Serif SC', serif;
+  --font-body: 'LXGW WenKai', 'Noto Serif SC', serif;
+  --font-mono: 'JetBrains Mono', 'LXGW WenKai', monospace;
+}
+
+:root {
+  --vp-c-brand-1: var(--wc-terracotta);
+  --vp-c-text-1: var(--wc-dark);
+  --vp-c-text-2: var(--wc-dark-3);
+  --vp-c-bg: var(--wc-cream);
+  --vp-c-bg-alt: var(--wc-cream-deep);
+  --vp-c-bg-elv: var(--wc-parchment);
+  --vp-font-family-base: var(--font-body);
+  --vp-shadow-1: 0 1px 2px rgba(45, 41, 38, 0.04), 0 1px 4px rgba(45, 41, 38, 0.02);
+}
+
+.dark {
+  --vp-c-brand-1: #d4927a;
+  --vp-c-text-1: #e8e2da;
+  --vp-c-bg: #1e1c19;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apply LXGW WenKai as the default Chinese-inclusive font across the app */
+html, body, button, input, textarea, select {
+  font-family: var(--font-body);
+}
+
+.VPHome {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.VPHome .VPContent {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+
+.VPHome .VPHero {
+  display: none !important; /* Hide default hero if any */
+}
+
+/* Hide default features/content padding */
+.VPHome .VPHomeFeatures, .VPHome .VPContent {
+    padding-bottom: 0;
+}
+
+/* Override global spacing to fit new CustomHero properly */
+@media (min-width: 960px) {
+  .VPHome .VPHero {
+    padding: 0 !important;
+  }
+}
+
+/* Article body: slightly smaller, calmer prose */
+.vp-doc {
+  font-size: 14.5px;
+}
+.vp-doc p,
+.vp-doc li {
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: #3d3834;
+}
+.vp-doc h2 {
+  font-size: 1.35rem !important;
+  margin-top: 40px !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+  font-family: 'LXGW WenKai', 'Noto Serif SC', serif !important;
+  color: #1d3350 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em;
+}
+.vp-doc h3 {
+  font-size: 1.08rem !important;
+  margin-top: 28px !important;
+  font-family: 'LXGW WenKai', 'Noto Serif SC', serif !important;
+  color: #1d3350 !important;
+  font-weight: 500 !important;
+}
+.vp-doc blockquote {
+  font-size: 14px;
+  color: #4a5570;
+  border-left-color: #b85a48 !important;
+}
+.vp-doc code {
+  font-size: 0.85em;
+}

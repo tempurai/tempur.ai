@@ -1,8 +1,7 @@
 ---
 layout: page
-title: 标签
+title: 关于
 sidebar: false
 ---
 
-<TagsPage />
-
+<AboutPage />

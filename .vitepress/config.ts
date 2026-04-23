@@ -1,9 +1,10 @@
-import { getPosts, getPostLength } from "./theme/serverUtils";
+import { getPosts, getPostLength, getFeatured, getHotTags, getArchive } from "./theme/serverUtils";
 import { buildBlogRSS } from "./theme/rss";
 import { transformerTwoslash } from "@shikijs/vitepress-twoslash";
 import mathjax3 from "markdown-it-mathjax3";
 
 async function config() {
+  const posts = await getPosts();
   return {
     lang: "en-US",
     title: "Tempur.ai",
@@ -50,9 +51,14 @@ async function config() {
       },
       docsDir: "/",
       // docsBranch: "master",
-      posts: await getPosts(),
+      posts,
+      featured: getFeatured(posts, 4),
+      hotTags: getHotTags(posts, 12),
+      archive: getArchive(posts),
       pageSize: 5,
       postLength: await getPostLength(),
+      outline: [2, 3],
+      outlineTitle: "文章目录",
       nav: [
         {
           text: "Blog",
@@ -62,10 +68,10 @@ async function config() {
           text: "Tags",
           link: "/tags",
         },
-        // {
-        //   text: "📃Archives",
-        //   link: "/archives",
-        // },
+        {
+          text: "About",
+          link: "/about",
+        },
         {
           text: "RSS",
           link: "https://2cents.tempur.ai/feed.xml",
@@ -75,8 +81,7 @@ async function config() {
         { icon: "github", link: "https://github.com/tempurai" },
         { icon: "twitter", link: "https://twitter.com/tempur_ai" },
       ],
-      // outline: 2, //设置右侧aside显示层级
-      aside: false,
+      aside: true,
       // blogs page show firewokrs animation
       showFireworksAnimation: false,
     },
