@@ -36,12 +36,7 @@ import { withBase } from 'vitepress'
 
 .uk-hero__bg {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1440px;
+  inset: 0;
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
